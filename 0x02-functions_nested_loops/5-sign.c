@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * main - print the sign of a number
+ * print_sign - print the sign of a number
  * @n: is the int to check
  * Return:1 and + if n greter then 0
  * 0 if n is 0
