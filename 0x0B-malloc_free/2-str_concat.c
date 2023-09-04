@@ -1,6 +1,12 @@
 #include "main.h"
 #include <stdlib.h>
 
+/**
+ * *str_concat - concatenate 2 strings
+ * @s1: is the first string
+ * @s2: is the sec string
+ * Return: a (success), NULL (fail)
+ */
 char *str_concat(char *s1, char *s2)
 {
 	char *a;
