@@ -1,6 +1,12 @@
 #include "main.h"
 #include <stdlib.h>
 
+/**
+ * malloc_chacked - allocat memory to somthing
+ * @b: number of bytes 
+ *
+ * Return: pointer on the allocated memory
+ */
 void *malloc_checked(unsigned int b)
 {
 	void *p;
