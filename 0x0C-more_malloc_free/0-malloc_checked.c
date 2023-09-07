@@ -1,11 +1,11 @@
-#include "main.h"
 #include <stdlib.h>
+#include "main.h"
 
 /**
- * malloc_chacked - allocat memory to somthing
- * @b: number of bytes 
+ * *malloc_checked - allocates memory using malloc
+ * @b: number of bytes to allocate
  *
- * Return: pointer on the allocated memory
+ * Return: a pointer to the allocated memory
  */
 void *malloc_checked(unsigned int b)
 {
@@ -14,8 +14,7 @@ void *malloc_checked(unsigned int b)
 	p = malloc(b);
 
 	if (p == NULL)
-	{
 		exit(98);
-	}
+
 	return (p);
 }
