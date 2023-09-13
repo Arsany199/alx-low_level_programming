@@ -1,4 +1,4 @@
-#include "clac.h"
+#include "calc.h"
 #include <stdio.h>
 #include <stdlib.h>
 
