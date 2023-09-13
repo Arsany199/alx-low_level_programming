@@ -1,14 +1,14 @@
-#include "calc.h"
-#include <stdio.h>
+#include "3-calc.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
- * main - the main function
- * @argc: the number of elements in argv
- * @argv: the array
- *
- * Return: 0 on success or NULL in fail
- */
+  * main - main function
+  * @argc: number of elements in argv
+  * @argv: array of elements
+  *
+  * Return: 0 on success
+  */
 int main(int argc, char *argv[])
 {
 	int (*oprt)(int, int);
