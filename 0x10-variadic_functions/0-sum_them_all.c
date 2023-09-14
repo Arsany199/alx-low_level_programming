@@ -1,5 +1,11 @@
 #include "variadic_functions.h"
 
+/**
+ * sum_them_all - sum all the numbers in parameter
+ * @n: the number of arguments
+ *
+ * Return: sum
+ */
 int sum_them_all(const unsigned int n, ...)
 {
 	unsigned int i;
