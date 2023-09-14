@@ -20,16 +20,18 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		if (separator == NULL)
 		{
 			printf("%d, ", va_arg(list, int));
+			i++;
 		}
 		else if (separator && i == 0)
 		{
 			printf("%d", va_arg(list, int));
+			i++;
 		}
 		else
 		{
 			printf("%s%d", separator, va_arg(list, int));
+			i++;
 		}
-		i++;
 	}
 	putchar('\n');
 
