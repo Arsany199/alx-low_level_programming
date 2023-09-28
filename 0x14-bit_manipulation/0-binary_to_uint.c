@@ -3,7 +3,7 @@
 
 /**
  * binary_to_uint - change from binary to int
- * @h: is the pointer pointing to the binary
+ * @b: is the pointer pointing to the binary
  *
  * Return: the output or '0' if fail
  */
