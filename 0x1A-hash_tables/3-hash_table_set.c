@@ -21,8 +21,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 
 	j = key_index((const unsigned char *)key, ht->size);
-	i = j;
-	while (ht->array[i])
+	for (i = j; ht->array[i]; i++)
 	{
 		if (strcmp(ht->array[i]->key, key) == 0)
 		{
@@ -30,7 +29,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			ht->array[i]->value = value_copy;
 			return (1);
 		}
-		i++;
 	}
 
 	n = malloc(sizeof(hash_node_t));
