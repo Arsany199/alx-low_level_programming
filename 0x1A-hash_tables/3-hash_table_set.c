@@ -2,6 +2,13 @@
 #include <stdlib.h>
 #include <string.h>
 
+/**
+ * hash_table_set - add element to the table
+ * @ht: is the hash table
+ * @key: the key of the element
+ * @value: the value of the key
+ * Return: 1 if seccess 0 if failed
+ */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int idx = 0;
