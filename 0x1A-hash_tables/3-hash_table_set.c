@@ -1,6 +1,4 @@
 #include "hash_tables.h"
-#include <stdlib.h>
-#include <string.h>
 
 /**
  * hash_table_set - add element to the table
@@ -11,9 +9,9 @@
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	hash_node_t *new;
+	hash_node_t *n;
 	char *value_copy;
-	unsigned long int index, i;
+	unsigned long int j, i;
 
 	if (ht == NULL || key == NULL || *key == '\0' || value == NULL)
 		return (0);
@@ -22,8 +20,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (value_copy == NULL)
 		return (0);
 
-	index = key_index((const unsigned char *)key, ht->size);
-	for (i = index; ht->array[i]; i++)
+	j = key_index((const unsigned char *)key, ht->size);
+	i = j;
+	while (ht->array[i])
 	{
 		if (strcmp(ht->array[i]->key, key) == 0)
 		{
@@ -31,23 +30,24 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			ht->array[i]->value = value_copy;
 			return (1);
 		}
+		i++;
 	}
 
-	new = malloc(sizeof(hash_node_t));
-	if (new == NULL)
+	n = malloc(sizeof(hash_node_t));
+	if (n == NULL)
 	{
 		free(value_copy);
 		return (0);
 	}
-	new->key = strdup(key);
-	if (new->key == NULL)
+	n->key = strdup(key);
+	if (n->key == NULL)
 	{
-		free(new);
+		free(n);
 		return (0);
 	}
-	new->value = value_copy;
-	new->next = ht->array[index];
-	ht->array[index] = new;
+	n->value = value_copy;
+	n->next = ht->array[j];
+	ht->array[j] = n;
 
 	return (1);
 }
