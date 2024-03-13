@@ -3,7 +3,8 @@
 /**
  * advanced_binary_recursive - performs advanced binary search
  * @array: the integer array
- * @size: its size
+ * @left: starting index
+ * @right: ending index
  * @value: value to search for
  * Return: the index found or -1 if not
  */
